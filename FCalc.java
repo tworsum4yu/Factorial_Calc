@@ -22,13 +22,13 @@ public class FCalc {
             return;
         }
 
-        float result = recursiveLoop(userNum);
+        double result = recursiveLoop(userNum);
 
         System.out.println("The factorial of " + userNum + " is " + result);
 
     }
 
-    public static float recursiveLoop(int num) {
+    public static double recursiveLoop(int num) {
         if (num == 1) return num;
         return num * recursiveLoop(num - 1);
     }
