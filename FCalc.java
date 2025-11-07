@@ -18,8 +18,18 @@ public class FCalc {
         try {
             userNum = scan.nextInt();
         } catch (Exception e) {
-            System.out.println("Closing as integer not inputted.");
+            System.out.println("Closing as an integer was not inputted.");
             return;
+        }
+
+        while (userNum > 100) {
+            System.out.println("Please enter an integer that is less than or equal to 100");
+            try {
+                userNum = scan.nextInt();
+            } catch (Exception e) {
+                System.out.println("Closing as an integer was not inputted.");
+                return;
+            }
         }
 
         double result = recursiveLoop(userNum);
